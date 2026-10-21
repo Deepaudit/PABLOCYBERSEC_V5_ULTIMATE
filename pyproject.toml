@@ -1,0 +1,39 @@
+[project]
+name = "pablocybersec-v5"
+version = "5.0.0"
+description = "PABLOCYBERSEC V5 — Ultimate Linux CTF Framework. Plataforma modular de cibersegurança para CTFs, laboratórios educacionais, TryHackMe e Hack The Box."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "PabloCyberSec" }
+]
+keywords = ["ctf", "cybersecurity", "pentest", "linux", "education", "tryhackme", "hackthebox"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Education",
+]
+
+[project.optional-dependencies]
+packetlab = ["scapy>=2.5.0"]
+dev = ["pytest>=7.4.0", "pytest-asyncio>=0.21.0"]
+
+[project.scripts]
+pablocybersec = "cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"

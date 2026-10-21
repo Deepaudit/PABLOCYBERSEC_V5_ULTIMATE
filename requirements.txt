@@ -1,0 +1,15 @@
+# PABLOCYBERSEC V5 — dependências Python
+#
+# O núcleo da plataforma usa APENAS a biblioteca padrão do Python 3.10+.
+# As dependências abaixo são OPCIONAIS e habilitam funcionalidades
+# específicas de módulos individuais. A ferramenta inicia e funciona
+# normalmente sem elas, com avisos claros sobre o que fica indisponível.
+
+# PC PacketLab — análise completa de arquivos PCAP/PCAPNG.
+# Sem esta dependência, PacketLab usa um modo de leitura de cabeçalho
+# básico, sem decodificação de pacotes.
+scapy>=2.5.0
+
+# Dependências de desenvolvimento/teste (instale com: pip install -r requirements-dev.txt)
+# listadas separadamente em requirements-dev.txt para não forçar
+# usuários finais a instalá-las.

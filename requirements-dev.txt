@@ -1,0 +1,5 @@
+# Dependências de desenvolvimento e testes da PABLOCYBERSEC V5
+-r requirements.txt
+
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
